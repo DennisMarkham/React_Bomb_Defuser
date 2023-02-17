@@ -21,9 +21,11 @@ document.getElementById("body").style.backgroundImage = `url('${white}')`;
 
  useEffect(() => {
     setTimeout(() => {
-      setCountDown((countdown) => countdown + -1);
+      setCountDown((countdown) => countdown - 1);
     }, 1000);
-  });
+  }, [countdown]);
+ //using count as th dependency prevents the countdown from accelerating when I do something
+ //else which causes a rerender, like opening the modal
 
 useEffect(() => {
 	if (countdown < 10)
@@ -63,6 +65,7 @@ function cut(choice){
 		<Link onClick={handleShow} style={{float: "right"}}>
         help?
       </Link>
+
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
