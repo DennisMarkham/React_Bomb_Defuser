@@ -12,6 +12,7 @@ document.getElementById("body").style.backgroundImage = `url('${white}')`;
 	
 	const [countdown, setCountDown] = useState(30);
 	const [phantomZero, setPhantomZero] = useState("");
+	const [correctWire, setCorrectWire] = useState(Math.floor(Math.random() * 3))
 
 	//modal stuff:
 	const [show, setShow] = useState(false);
@@ -34,9 +35,9 @@ useEffect(() => {
 	}
 })
 
-const correct= Math.floor(Math.random() * 3);
+//const correct= Math.floor(Math.random() * 3);
 
-console.log(correct);
+console.log({correctWire});
  if(countdown == 0)
  {
  	window.location = "/boom"
@@ -44,7 +45,7 @@ console.log(correct);
 
 
 function cut(choice){
-	if(choice  == correct)
+	if(choice  == {correctWire})
 	{
 		window.location = "/victory";
 	}
