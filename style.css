@@ -1,0 +1,34 @@
+@font-face
+{
+	font-family: digital-7;
+	src: url(digital-7.ttf);
+}
+
+#countbox
+{
+	color: red;
+	background-color: black;
+	font-size: 200%;
+	padding: 5px;
+	border-style: outset;
+	border-width: 5px;
+	border-color: lightgrey;
+	font-family:digital-7;
+}
+
+#main
+{
+	padding: 50px;
+}
+
+.final{
+	font-size: 500%;
+	text-align: center;
+}
+
+@media only screen and (max-width: 800px){
+	img
+	{
+		width: 400px;
+	}
+}
