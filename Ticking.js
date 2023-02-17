@@ -13,9 +13,7 @@ document.getElementById("body").style.backgroundImage = `url('${white}')`;
 	const [countdown, setCountDown] = useState(30);
 	const [phantomZero, setPhantomZero] = useState("");
 	const [correctWire, setCorrectWire] = useState(Math.floor(Math.random() * 3))
-	//okay, wow, this is really weird.  Really super duper weird.  The correct wire
-	//doesn't seem to correlate what produces victory
-
+	
 
 
 	//modal stuff:
@@ -25,7 +23,7 @@ document.getElementById("body").style.backgroundImage = `url('${white}')`;
 
 useEffect(() => { console.log({correctWire})
   }, []);
-//should ensure "correctWire" only console logs once.  Doesn't.
+
 
  useEffect(() => {
     setTimeout(() => {
@@ -42,11 +40,7 @@ useEffect(() => {
 	}
 })
 
-//const correct= Math.floor(Math.random() * 3);
 
-//console.log({correctWire});
-//this display again and again and again.  So while its an improvement because its
-//consistent, at least, its still not ideal.
 
  if(countdown == 0)
  {
